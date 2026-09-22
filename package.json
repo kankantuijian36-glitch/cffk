@@ -15,8 +15,8 @@
     "db:seed:local": "wrangler d1 execute DB --local --file=./scripts/seed.sql --yes",
     "db:seed:remote": "wrangler d1 execute DB --remote --file=./scripts/seed.sql --yes",
     "generate-types": "wrangler types",
-    "deploy": "bun run db:migrate:remote && bun run db:seed:remote && wrangler deploy",
-    "up": "bun run db:migrate:remote && vike build && wrangler deploy"
+    "deploy": "bun run build && wrangler deploy",
+    "up": "bun run build && wrangler deploy"
   },
   "dependencies": {
     "@better-auth/drizzle-adapter": "^1.6.25",
